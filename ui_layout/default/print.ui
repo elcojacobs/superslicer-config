@@ -40,7 +40,7 @@ group:Quality
 	line:Avoid crossing perimeters
 		setting:label$_:avoid_crossing_perimeters
 		setting:label_width$12:label$Not on first layer:avoid_crossing_not_first_layer
-		setting:avoid_crossing_perimeters_max_detour
+		setting:sidetext_width$15:avoid_crossing_perimeters_max_detour
 	end_line
 	line:Overlapping external perimeter
 		setting:label$_:thin_perimeters
@@ -70,7 +70,7 @@ group:Advanced
 		setting:width$5:gap_fill_last
 	end_line
 	line:Seam
-		setting:tags$Simple$Advanced$Expert$Prusa$SuSi:script:enum$corners$Corners$nearest$Nearest$random$Random$aligned$Aligned$rear$Rear$custom$Custom:depends$seam_position$seam_angle_cost$seam_travel_cost:label$Seam position:label_width$12:sidetext_width$0:tooltip$Position of perimeters' starting points.\nCustom can be defined in Advanced or Expert mode. Cost-based settings let you choose the angle and travel cost. A high angle cost will place the seam where it can be hidden by a corner, the travel cost place the seam near the last position (often at the end of the previous infill).:s_seam_position
+		setting:tags$Simple$Advanced$Expert$Prusa$SuSi:script:enum$corners$Corners$nearest$Nearest$random$Scattered$allrandom$Random$aligned$Aligned$contiguous$Contiguous$rear$Rear$custom$Custom:depends$seam_position$seam_angle_cost$seam_travel_cost:label$Seam position:label_width$12:sidetext_width$0:tooltip$Position of perimeters' starting points.\nCustom can be defined in Advanced or Expert mode. Cost-based settings let you choose the angle and travel cost. A high angle cost will place the seam where it can be hidden by a corner, the travel cost place the seam near the last position (often at the end of the previous infill).:s_seam_position
 #		setting:tags$Expert:label_width$12:sidetext_width$0:seam_position
 		setting:tags$Advanced$Expert$SuSi:width$3:sidetext_width$0:seam_angle_cost
 		setting:tags$Advanced$Expert$SuSi:width$3:sidetext_width$0:seam_travel_cost
@@ -125,7 +125,7 @@ group:Modifying slices
 	end_line
 	line:Convert round vertical holes to polyholes
 		setting:label$_:hole_to_polyhole
-		setting:hole_to_polyhole_threshold
+		setting:sidetext_width$5:hole_to_polyhole_threshold
 		setting:hole_to_polyhole_twisted
 	end_line
 group:Other
@@ -175,7 +175,10 @@ group:sidetext_width$5:Advanced
 		setting:label_width$8:width$5:external_infill_margin
 		setting:label_width$6:width$5:bridged_infill_margin
 	end_line
-	setting:only_retract_when_crossing_perimeters
+	line:Only retract when crossing perimeters
+		setting:label_width$0:label$_:only_retract_when_crossing_perimeters
+		setting:enforce_retract_first_layer
+	end_line
 	setting:infill_first
 group:Advanced Infill options
 	line:Ironing infill pattern tuning
@@ -261,7 +264,7 @@ group:Options for support material interface
 page:Speed:time
 group:label_width$8:sidetext_width$7:Speed for print moves
 	line:Default speed
-		setting:width$4:default_speed
+		setting:width$4:sidetext_width$15:default_speed
 	line:Perimeter speed
 		setting:width$4:perimeter_speed
 		setting:width$4:external_perimeter_speed
